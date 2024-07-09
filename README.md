@@ -1,8 +1,5 @@
-# React + Vite
+Stage 2 task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The task given was to collaborate with a Ui/Ux Designer and implent the design as a Frontend Developer
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The design created was an e-commerce website

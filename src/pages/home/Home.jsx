@@ -15,9 +15,9 @@ const Home = () => {
         };
     }, [])
   return (
-    <div className="flex flex-col px-[24px] sm:px-[52px] relative">
+    <div className="flex flex-col px-[24px] md:px-[52px] relative">
         {/* Hero section */}
-        <div className="flex relative bg-[#E0B0DE] w-full sm:h-[427.17px] 
+        <div className="flex relative bg-[#E0B0DE] w-full md:h-[427.17px] 
         rounded-[24px] py-[65px] px-[40px] sm:py-[74px] sm:px-[74px] mb-5
         "
         >
@@ -40,8 +40,8 @@ const Home = () => {
 
             {
                 windowWidth > 800 ? 
-                <img src={hero} alt="phones" className="w-1/2 z-10" />:
-                <img src={heroSm} alt="phones" className="w-[202px] h-[134px] z-0" />
+                <img src={hero} alt="phones" className="w-1/2 z-10" loading="lazy" />:
+                <img src={heroSm} alt="phones" className="w-[202px] z-0" loading="lazy" />
             }
 
             <img src={triBig} alt="Big triangle" className="absolute  top-0 right-[15px] z-[-999px] opacity-0 sm:opacity-[0.3]" />

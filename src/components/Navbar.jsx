@@ -9,7 +9,7 @@ const Navbar = () => {
         setActive(!active)
     }
   return (
-    <div className='flex justify-between items-center px-[24px] sm:px-[52px] py-6 relative'>
+    <div className='flex justify-between items-center px-[24px] md:px-[52px] py-6 relative'>
         <div className="flex items-center">
             <img src={arrowDown} alt="arrow" 
             className='w-[22px] h-[20px] sm:hidden block'
@@ -18,9 +18,9 @@ const Navbar = () => {
             <Link to="/"><img src={logo} alt="logo" className='w-45 h-12' /></Link>
         </div>
 
-        <div className={`flex flex-col sm:flex-row font-poppins gap-3 sm:gap-5 
-        text-lg font-normal sm:relative absolute sm:top-0 top-[60px] sm:opacity-[1] left-[24px] sm:left-0
-        sm:bg-transparent bg-white z-50 sm:p-0 p-[10px_15px] sm:shadow-none shadow-md
+        <div className={`flex flex-col md:flex-row font-poppins gap-3 sm:gap-5 
+        text-lg font-normal sm:relative absolute sm:top-0 top-[60px] sm:opacity-[1] left-[24px] md:left-0
+        md:bg-transparent bg-white z-50 sm:p-0 p-[10px_15px] md:shadow-none shadow-md
         ${active ? 'opacity-[1] ease-out' : 'opacity-0'}
         `}
         >

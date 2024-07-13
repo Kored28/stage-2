@@ -4,15 +4,22 @@ import Phones from "./Phones"
 
 
 const Home = () => {
-    const [windowWidth, setWindowWidth] = useState(window.outerWidth);
+    const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
-        const handleResize = () => setWindowWidth(window.outerWidth);
-
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
+        const mediaQuery = window.matchMedia("(max-width: 600px)");
+    
+        setIsMobile(mediaQuery.matches);
+    
+        const handleMediaQueryChange = (event) => {
+        setIsMobile(event.matches);
+        }
+    
+        mediaQuery.addEventListener('change', handleMediaQueryChange)
+    
+        return () =>{
+        mediaQuery.removeEventListener('change', handleMediaQueryChange)
+        }
     }, [])
   return (
     <div className="flex flex-col px-[24px] md:px-[52px] relative">
@@ -39,9 +46,9 @@ const Home = () => {
             </div>
 
             {
-                windowWidth > 800 ? 
-                <img src={hero} alt="phones" className="w-1/2 z-10" loading="lazy" />:
-                <img src={heroSm} alt="phones" className="w-[202px] z-0" loading="lazy" />
+                isMobile ? 
+                <img src={heroSm} alt="phones" className="w-[202px] z-0" loading="lazy" /> :
+                <img src={hero} alt="phones" className="w-1/2 z-10" loading="lazy" />
             }
 
             <img src={triBig} alt="Big triangle" className="absolute  top-0 right-[15px] z-[-999px] opacity-0 sm:opacity-[0.3]" />
